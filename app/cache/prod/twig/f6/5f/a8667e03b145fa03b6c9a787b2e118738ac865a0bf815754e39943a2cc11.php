@@ -31,8 +31,7 @@ class __TwigTemplate_f65fa8667e03b145fa03b6c9a787b2e118738ac865a0bf815754e39943a
     public function block_title($context, array $blocks = array())
     {
         // line 4
-        if (isset($context["series"])) { $_series_ = $context["series"]; } else { $_series_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_series_, "DisplayName"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["series"]) ? $context["series"] : null), "DisplayName"), "html", null, true);
         echo "
 ";
     }
@@ -46,8 +45,7 @@ class __TwigTemplate_f65fa8667e03b145fa03b6c9a787b2e118738ac865a0bf815754e39943a
         echo "\" class=\"ui-icon-home ui-btn ui-shadow ui-nodisc-icon  ui-btn-inline ui-btn-icon-left\" data-transition=\"slide\" data-direction=\"reverse\">首页</a>
 <h1>专辑：";
         // line 9
-        if (isset($context["series"])) { $_series_ = $context["series"]; } else { $_series_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_series_, "DisplayName"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["series"]) ? $context["series"] : null), "DisplayName"), "html", null, true);
         echo "</h1>
 ";
     }
@@ -57,37 +55,29 @@ class __TwigTemplate_f65fa8667e03b145fa03b6c9a787b2e118738ac865a0bf815754e39943a
     {
         // line 13
         echo "\t<p><strong>专辑：</strong>";
-        if (isset($context["series"])) { $_series_ = $context["series"]; } else { $_series_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_series_, "DisplayName"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["series"]) ? $context["series"] : null), "DisplayName"), "html", null, true);
         echo "</p>
 \t<img style=\"width:100%\" src=\"";
         // line 14
-        if (isset($context["libLoc"])) { $_libLoc_ = $context["libLoc"]; } else { $_libLoc_ = null; }
-        echo twig_escape_filter($this->env, $_libLoc_, "html", null, true);
-        if (isset($context["series"])) { $_series_ = $context["series"]; } else { $_series_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_series_, "Snapshot"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["libLoc"]) ? $context["libLoc"] : null), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["series"]) ? $context["series"] : null), "Snapshot"), "html", null, true);
         echo "\">
 \t<p><strong>简介：</strong>";
         // line 15
-        if (isset($context["series"])) { $_series_ = $context["series"]; } else { $_series_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_series_, "Description"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["series"]) ? $context["series"] : null), "Description"), "html", null, true);
         echo "</p>
 \t<ul data-role=\"listview\" data-inset=\"true\">
 \t\t<li data-role=\"divider\" data-theme=\"b\">书目</li>
 \t\t";
         // line 18
-        if (isset($context["series"])) { $_series_ = $context["series"]; } else { $_series_ = null; }
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute($_series_, "Books"));
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["series"]) ? $context["series"] : null), "Books"));
         foreach ($context['_seq'] as $context["_key"] => $context["book"]) {
             // line 19
             echo "\t\t<li><a href=\"";
-            if (isset($context["series"])) { $_series_ = $context["series"]; } else { $_series_ = null; }
-            if (isset($context["book"])) { $_book_ = $context["book"]; } else { $_book_ = null; }
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_series_book", array("seriesId" => $this->getAttribute($_series_, "Id"), "subId" => $this->getAttribute($_book_, "Id"))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_series_book", array("seriesId" => $this->getAttribute((isset($context["series"]) ? $context["series"] : null), "Id"), "subId" => $this->getAttribute((isset($context["book"]) ? $context["book"] : null), "Id"))), "html", null, true);
             echo "\" data-transition=\"slide\">";
-            if (isset($context["book"])) { $_book_ = $context["book"]; } else { $_book_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_book_, "DisplayName"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["book"]) ? $context["book"] : null), "DisplayName"), "html", null, true);
             echo "</a></li>
 \t\t";
         }
@@ -104,8 +94,7 @@ class __TwigTemplate_f65fa8667e03b145fa03b6c9a787b2e118738ac865a0bf815754e39943a
     {
         // line 25
         echo "<h1>";
-        if (isset($context["series"])) { $_series_ = $context["series"]; } else { $_series_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_series_, "DisplayName"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["series"]) ? $context["series"] : null), "DisplayName"), "html", null, true);
         echo "</h1>
 ";
     }
@@ -122,6 +111,6 @@ class __TwigTemplate_f65fa8667e03b145fa03b6c9a787b2e118738ac865a0bf815754e39943a
 
     public function getDebugInfo()
     {
-        return array (  103 => 24,  79 => 18,  54 => 14,  31 => 3,  549 => 162,  543 => 161,  538 => 158,  530 => 155,  526 => 153,  522 => 151,  512 => 149,  505 => 148,  502 => 147,  497 => 146,  491 => 144,  488 => 143,  483 => 142,  473 => 134,  469 => 132,  466 => 131,  460 => 130,  455 => 129,  450 => 126,  444 => 122,  441 => 121,  437 => 120,  434 => 119,  429 => 116,  423 => 112,  420 => 111,  416 => 110,  413 => 109,  408 => 106,  394 => 105,  390 => 103,  375 => 101,  365 => 99,  362 => 98,  359 => 97,  355 => 95,  348 => 91,  344 => 90,  330 => 89,  327 => 88,  321 => 86,  307 => 85,  302 => 84,  295 => 81,  287 => 80,  279 => 78,  256 => 73,  251 => 71,  239 => 69,  231 => 68,  219 => 67,  201 => 66,  143 => 49,  138 => 44,  134 => 43,  131 => 42,  122 => 37,  117 => 36,  108 => 31,  102 => 28,  92 => 25,  84 => 19,  72 => 15,  69 => 17,  51 => 13,  48 => 7,  35 => 5,  29 => 3,  312 => 96,  308 => 94,  293 => 92,  285 => 90,  281 => 88,  277 => 86,  274 => 85,  271 => 77,  264 => 74,  261 => 81,  257 => 79,  253 => 77,  249 => 76,  247 => 70,  237 => 73,  204 => 69,  198 => 65,  194 => 64,  150 => 54,  147 => 51,  127 => 41,  112 => 32,  96 => 25,  76 => 19,  71 => 17,  227 => 92,  224 => 91,  221 => 90,  207 => 70,  197 => 74,  195 => 65,  192 => 72,  189 => 61,  186 => 60,  181 => 67,  178 => 61,  173 => 58,  162 => 58,  158 => 56,  155 => 55,  152 => 55,  142 => 52,  136 => 44,  133 => 43,  130 => 42,  120 => 40,  105 => 31,  75 => 24,  53 => 19,  114 => 22,  109 => 31,  106 => 25,  101 => 19,  85 => 22,  77 => 12,  67 => 15,  28 => 4,  110 => 20,  100 => 27,  89 => 16,  65 => 14,  63 => 13,  58 => 10,  34 => 4,  98 => 21,  88 => 17,  80 => 15,  78 => 25,  46 => 12,  44 => 8,  60 => 21,  40 => 6,  27 => 3,  39 => 7,  36 => 7,  32 => 4,  55 => 15,  43 => 7,  26 => 6,  24 => 4,  22 => 2,  57 => 11,  50 => 7,  47 => 7,  38 => 6,  25 => 5,  19 => 1,  232 => 72,  226 => 71,  222 => 76,  215 => 73,  211 => 84,  208 => 70,  202 => 68,  196 => 64,  193 => 63,  187 => 62,  183 => 62,  180 => 59,  171 => 54,  166 => 51,  163 => 50,  160 => 49,  157 => 48,  149 => 42,  146 => 41,  140 => 46,  137 => 37,  129 => 36,  124 => 35,  121 => 24,  118 => 36,  115 => 39,  111 => 32,  107 => 28,  104 => 28,  97 => 24,  93 => 18,  90 => 21,  81 => 14,  70 => 23,  66 => 13,  62 => 11,  59 => 13,  56 => 12,  52 => 10,  49 => 9,  45 => 6,  41 => 7,  37 => 5,  33 => 4,  30 => 3,);
+        return array (  96 => 25,  77 => 19,  34 => 4,  480 => 162,  474 => 161,  469 => 158,  461 => 155,  457 => 153,  453 => 151,  444 => 149,  440 => 148,  437 => 147,  435 => 146,  430 => 144,  427 => 143,  423 => 142,  413 => 134,  409 => 132,  407 => 131,  402 => 130,  398 => 129,  393 => 126,  387 => 122,  384 => 121,  381 => 120,  379 => 119,  374 => 116,  368 => 112,  365 => 111,  362 => 110,  360 => 109,  355 => 106,  341 => 105,  337 => 103,  322 => 101,  314 => 99,  312 => 98,  309 => 97,  305 => 95,  298 => 91,  294 => 90,  285 => 89,  283 => 88,  278 => 86,  268 => 85,  264 => 84,  258 => 81,  252 => 80,  247 => 78,  241 => 77,  229 => 73,  220 => 70,  214 => 69,  177 => 65,  169 => 60,  140 => 55,  132 => 51,  128 => 49,  111 => 37,  107 => 36,  61 => 13,  273 => 96,  269 => 94,  254 => 92,  246 => 90,  243 => 88,  240 => 86,  238 => 85,  235 => 74,  230 => 82,  227 => 81,  224 => 71,  221 => 77,  219 => 76,  217 => 75,  208 => 68,  204 => 72,  179 => 69,  159 => 61,  143 => 56,  135 => 53,  131 => 52,  119 => 42,  108 => 36,  102 => 32,  71 => 19,  67 => 15,  63 => 15,  59 => 14,  47 => 9,  87 => 25,  55 => 15,  94 => 28,  89 => 20,  85 => 25,  79 => 18,  75 => 17,  72 => 16,  68 => 14,  56 => 9,  50 => 10,  41 => 9,  28 => 3,  38 => 6,  21 => 2,  35 => 5,  24 => 4,  201 => 92,  196 => 90,  183 => 82,  171 => 61,  166 => 71,  163 => 62,  158 => 67,  156 => 66,  151 => 63,  142 => 59,  138 => 54,  136 => 56,  123 => 47,  121 => 46,  117 => 44,  115 => 43,  105 => 40,  101 => 32,  91 => 27,  69 => 25,  66 => 15,  62 => 14,  49 => 19,  43 => 8,  31 => 3,  29 => 3,  26 => 6,  25 => 4,  19 => 1,  98 => 31,  93 => 24,  88 => 21,  78 => 21,  46 => 7,  44 => 12,  40 => 7,  32 => 4,  27 => 4,  22 => 2,  209 => 82,  203 => 78,  199 => 67,  193 => 73,  189 => 71,  187 => 84,  182 => 66,  176 => 64,  173 => 65,  168 => 72,  164 => 59,  162 => 59,  154 => 58,  149 => 51,  147 => 58,  144 => 49,  141 => 48,  133 => 55,  130 => 41,  125 => 44,  122 => 43,  116 => 41,  112 => 42,  109 => 34,  106 => 33,  103 => 32,  99 => 31,  95 => 28,  92 => 21,  86 => 28,  82 => 22,  80 => 19,  73 => 18,  64 => 17,  60 => 13,  57 => 13,  54 => 12,  51 => 14,  48 => 9,  45 => 8,  42 => 7,  39 => 9,  36 => 5,  33 => 4,  30 => 7,);
     }
 }

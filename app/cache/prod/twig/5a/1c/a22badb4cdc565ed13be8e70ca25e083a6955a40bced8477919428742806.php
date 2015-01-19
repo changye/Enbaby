@@ -17,37 +17,28 @@ class __TwigTemplate_5a1ca22badb4cdc565ed13be8e70ca25e083a6955a40bced84779194287
     {
         // line 1
         echo "[exception] ";
-        if (isset($context["status_code"])) { $_status_code_ = $context["status_code"]; } else { $_status_code_ = null; }
-        if (isset($context["status_text"])) { $_status_text_ = $context["status_text"]; } else { $_status_text_ = null; }
-        if (isset($context["exception"])) { $_exception_ = $context["exception"]; } else { $_exception_ = null; }
-        echo twig_escape_filter($this->env, (((($_status_code_ . " | ") . $_status_text_) . " | ") . $this->getAttribute($_exception_, "class")), "html", null, true);
+        echo twig_escape_filter($this->env, (((((isset($context["status_code"]) ? $context["status_code"] : null) . " | ") . (isset($context["status_text"]) ? $context["status_text"] : null)) . " | ") . $this->getAttribute((isset($context["exception"]) ? $context["exception"] : null), "class")), "html", null, true);
         echo "
 [message] ";
         // line 2
-        if (isset($context["exception"])) { $_exception_ = $context["exception"]; } else { $_exception_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_exception_, "message"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["exception"]) ? $context["exception"] : null), "message"), "html", null, true);
         echo "
 ";
         // line 3
-        if (isset($context["exception"])) { $_exception_ = $context["exception"]; } else { $_exception_ = null; }
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute($_exception_, "toarray"));
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["exception"]) ? $context["exception"] : null), "toarray"));
         foreach ($context['_seq'] as $context["i"] => $context["e"]) {
             // line 4
             echo "[";
-            if (isset($context["i"])) { $_i_ = $context["i"]; } else { $_i_ = null; }
-            echo twig_escape_filter($this->env, ($_i_ + 1), "html", null, true);
+            echo twig_escape_filter($this->env, ((isset($context["i"]) ? $context["i"] : null) + 1), "html", null, true);
             echo "] ";
-            if (isset($context["e"])) { $_e_ = $context["e"]; } else { $_e_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_e_, "class"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["e"]) ? $context["e"] : null), "class"), "html", null, true);
             echo ": ";
-            if (isset($context["e"])) { $_e_ = $context["e"]; } else { $_e_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($_e_, "message"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["e"]) ? $context["e"] : null), "message"), "html", null, true);
             echo "
 ";
             // line 5
-            if (isset($context["e"])) { $_e_ = $context["e"]; } else { $_e_ = null; }
-            $this->env->loadTemplate("TwigBundle:Exception:traces.txt.twig")->display(array("exception" => $_e_));
+            $this->env->loadTemplate("TwigBundle:Exception:traces.txt.twig")->display(array("exception" => (isset($context["e"]) ? $context["e"] : null)));
             // line 6
             echo "
 ";
@@ -69,6 +60,6 @@ class __TwigTemplate_5a1ca22badb4cdc565ed13be8e70ca25e083a6955a40bced84779194287
 
     public function getDebugInfo()
     {
-        return array (  110 => 20,  100 => 19,  89 => 16,  65 => 14,  63 => 13,  58 => 12,  34 => 5,  98 => 40,  88 => 6,  80 => 15,  78 => 40,  46 => 9,  44 => 9,  60 => 12,  40 => 7,  27 => 2,  39 => 7,  36 => 7,  32 => 3,  55 => 15,  43 => 8,  26 => 4,  24 => 4,  22 => 2,  57 => 11,  50 => 7,  47 => 6,  38 => 13,  25 => 3,  19 => 1,  232 => 82,  226 => 78,  222 => 76,  215 => 73,  211 => 71,  208 => 70,  202 => 68,  196 => 64,  193 => 63,  187 => 62,  183 => 60,  180 => 59,  171 => 54,  166 => 51,  163 => 50,  160 => 49,  157 => 48,  149 => 42,  146 => 41,  140 => 38,  137 => 37,  129 => 36,  124 => 35,  121 => 34,  118 => 33,  115 => 32,  111 => 30,  107 => 28,  104 => 27,  97 => 24,  93 => 9,  90 => 21,  81 => 19,  70 => 15,  66 => 13,  62 => 16,  59 => 11,  56 => 10,  52 => 6,  49 => 5,  45 => 7,  41 => 8,  37 => 4,  33 => 5,  30 => 4,);
+        return array (  41 => 5,  28 => 3,  38 => 13,  21 => 2,  35 => 5,  24 => 2,  201 => 92,  196 => 90,  183 => 82,  171 => 73,  166 => 71,  163 => 70,  158 => 67,  156 => 66,  151 => 63,  142 => 59,  138 => 57,  136 => 56,  123 => 47,  121 => 46,  117 => 44,  115 => 43,  105 => 40,  101 => 39,  91 => 31,  69 => 25,  66 => 24,  62 => 23,  49 => 19,  43 => 6,  31 => 4,  29 => 4,  26 => 5,  25 => 3,  19 => 1,  98 => 40,  93 => 9,  88 => 6,  78 => 40,  46 => 7,  44 => 7,  40 => 7,  32 => 4,  27 => 4,  22 => 2,  209 => 82,  203 => 78,  199 => 91,  193 => 73,  189 => 71,  187 => 84,  182 => 68,  176 => 64,  173 => 74,  168 => 72,  164 => 60,  162 => 59,  154 => 54,  149 => 51,  147 => 50,  144 => 49,  141 => 48,  133 => 55,  130 => 41,  125 => 38,  122 => 37,  116 => 36,  112 => 42,  109 => 34,  106 => 33,  103 => 32,  99 => 30,  95 => 28,  92 => 27,  86 => 28,  82 => 22,  80 => 41,  73 => 19,  64 => 15,  60 => 13,  57 => 16,  54 => 21,  51 => 9,  48 => 9,  45 => 8,  42 => 6,  39 => 16,  36 => 7,  33 => 10,  30 => 3,);
     }
 }

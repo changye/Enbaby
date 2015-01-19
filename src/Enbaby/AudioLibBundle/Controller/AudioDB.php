@@ -1,10 +1,9 @@
 <?php
-DEFINE("ROOT","/var/www/Enbaby/web/AudioLib/");
-DEFINE("DBROOT","db.enbaby.net/AudioLib/");
+DEFINE("DBROOT","http://db.enbaby.net/AudioLib/");
 
 function getBookInfoFromIndex($seriesId,$subId)
 {
-	$bookIndex = ROOT . $seriesId . "/" . $subId . "/index.json";
+	$bookIndex = DBROOT . $seriesId . "/" . $subId . "/index.json";
 	$handle = fopen($bookIndex, 'r');
 	if(!$handle) return null;
 	$json_string = '';
@@ -22,7 +21,7 @@ function getBookInfoFromIndex($seriesId,$subId)
 
 function getSeriesInfoFromIndex($seriesId)
 {
-	$bookIndex = ROOT . $seriesId . "/" . "/index.json";
+	$bookIndex = DBROOT . $seriesId . "/" . "/index.json";
 	$handle = fopen($bookIndex, 'r');
 	if(!$handle) return null;
 	$json_string = '';

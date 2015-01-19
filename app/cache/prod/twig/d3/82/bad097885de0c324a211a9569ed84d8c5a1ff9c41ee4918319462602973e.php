@@ -22,19 +22,16 @@ class __TwigTemplate_d382bad097885de0c324a211a9569ed84d8c5a1ff9c41ee491831946260
         <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
         <title>An bala Error Occurred: ";
         // line 5
-        if (isset($context["status_text"])) { $_status_text_ = $context["status_text"]; } else { $_status_text_ = null; }
-        echo twig_escape_filter($this->env, $_status_text_, "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["status_text"]) ? $context["status_text"] : null), "html", null, true);
         echo "</title>
     </head>
     <body>
         <h1>Oops! An Error Occurred</h1>
         <h2>The server returned a \"";
         // line 9
-        if (isset($context["status_code"])) { $_status_code_ = $context["status_code"]; } else { $_status_code_ = null; }
-        echo twig_escape_filter($this->env, $_status_code_, "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["status_code"]) ? $context["status_code"] : null), "html", null, true);
         echo " ";
-        if (isset($context["status_text"])) { $_status_text_ = $context["status_text"]; } else { $_status_text_ = null; }
-        echo twig_escape_filter($this->env, $_status_text_, "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["status_text"]) ? $context["status_text"] : null), "html", null, true);
         echo "\".</h2>
 
         <div>
@@ -59,6 +56,6 @@ class __TwigTemplate_d382bad097885de0c324a211a9569ed84d8c5a1ff9c41ee491831946260
 
     public function getDebugInfo()
     {
-        return array (  114 => 22,  109 => 21,  106 => 20,  101 => 19,  85 => 16,  77 => 12,  67 => 9,  28 => 4,  110 => 20,  100 => 19,  89 => 16,  65 => 14,  63 => 13,  58 => 12,  34 => 5,  98 => 40,  88 => 17,  80 => 15,  78 => 40,  46 => 9,  44 => 9,  60 => 12,  40 => 7,  27 => 3,  39 => 7,  36 => 7,  32 => 3,  55 => 15,  43 => 8,  26 => 4,  24 => 4,  22 => 2,  57 => 11,  50 => 7,  47 => 7,  38 => 13,  25 => 5,  19 => 1,  232 => 82,  226 => 78,  222 => 76,  215 => 73,  211 => 71,  208 => 70,  202 => 68,  196 => 64,  193 => 63,  187 => 62,  183 => 60,  180 => 59,  171 => 54,  166 => 51,  163 => 50,  160 => 49,  157 => 48,  149 => 42,  146 => 41,  140 => 38,  137 => 37,  129 => 36,  124 => 35,  121 => 24,  118 => 33,  115 => 32,  111 => 30,  107 => 28,  104 => 27,  97 => 24,  93 => 18,  90 => 21,  81 => 14,  70 => 15,  66 => 13,  62 => 16,  59 => 8,  56 => 10,  52 => 6,  49 => 5,  45 => 6,  41 => 8,  37 => 5,  33 => 9,  30 => 4,);
+        return array (  25 => 5,  19 => 1,  98 => 40,  93 => 9,  88 => 6,  78 => 40,  46 => 10,  44 => 9,  40 => 8,  32 => 9,  27 => 4,  22 => 1,  209 => 82,  203 => 78,  199 => 76,  193 => 73,  189 => 71,  187 => 70,  182 => 68,  176 => 64,  173 => 63,  168 => 62,  164 => 60,  162 => 59,  154 => 54,  149 => 51,  147 => 50,  144 => 49,  141 => 48,  133 => 42,  130 => 41,  125 => 38,  122 => 37,  116 => 36,  112 => 35,  109 => 34,  106 => 33,  103 => 32,  99 => 30,  95 => 28,  92 => 27,  86 => 24,  82 => 22,  80 => 41,  73 => 19,  64 => 15,  60 => 13,  57 => 12,  54 => 11,  51 => 10,  48 => 9,  45 => 8,  42 => 7,  39 => 6,  36 => 7,  33 => 4,  30 => 3,);
     }
 }
