@@ -1,0 +1,8 @@
+enbaby_redirect:
+    resource: "@EnbabyRedirectBundle/Resources/config/routing.yml"
+    prefix:   /redirect/
+
+enbaby_audio_lib:
+    resource: "@EnbabyAudioLibBundle/Resources/config/routing.yml"
+    prefix:   /audiolib/
+

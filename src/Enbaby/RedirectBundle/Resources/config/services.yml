@@ -1,0 +1,7 @@
+parameters:
+#    enbaby_redirect.example.class: Enbaby\RedirectBundle\Example
+
+services:
+#    enbaby_redirect.example:
+#        class: %enbaby_redirect.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

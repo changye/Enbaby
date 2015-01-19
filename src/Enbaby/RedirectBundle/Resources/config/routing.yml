@@ -1,0 +1,7 @@
+enbaby_redirect_homepage:
+    pattern:  /
+    defaults: { _controller: EnbabyRedirectBundle:Default:index }
+
+_redirect_wechat:
+    pattern: /wechat/{index}
+    defaults: {_controller: EnbabyRedirectBundle:Default:wechat,index:1}

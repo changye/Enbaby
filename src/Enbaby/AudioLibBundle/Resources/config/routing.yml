@@ -1,0 +1,21 @@
+    
+_index:
+    pattern: /
+    defaults: { _controller: EnbabyAudioLibBundle:Default:index }
+
+_series:
+    pattern: /series/{seriesId}
+    defaults: { _controller: EnbabyAudioLibBundle:Default:getSeries,seriesId:Z1401 }
+
+_series_book:
+    pattern: /series/{seriesId}/{subId}
+    defaults: { _controller: EnbabyAudioLibBundle:Default:getSeriesBook,seriesId:Z1401}
+
+
+_book:
+    pattern: /book/{bookId}
+    defaults: { _controller: EnbabyAudioLibBundle:Default:getBook,bookId:Z1401-0001 }
+
+_redirect:
+    pattern: /redirect/{index}
+    defaults: { _controller: EnbabyAudioLibBundle:Default:redirect,index:1}

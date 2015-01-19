@@ -1,0 +1,26 @@
+{% extends '::mobile.html.twig' %}
+
+{% block title %}
+{{ series.DisplayName }}
+{% endblock %}
+
+{% block header %}
+<a href="{{path('_index')}}" class="ui-icon-home ui-btn ui-shadow ui-nodisc-icon  ui-btn-inline ui-btn-icon-left" data-transition="slide" data-direction="reverse">首页</a>
+<h1>专辑：{{ series.DisplayName }}</h1>
+{% endblock %}
+
+{% block content %}
+	<p><strong>专辑：</strong>{{ series.DisplayName }}</p>
+	<img style="width:100%" src="{{libLoc}}{{series.Snapshot}}">
+	<p><strong>简介：</strong>{{ series.Description }}</p>
+	<ul data-role="listview" data-inset="true">
+		<li data-role="divider" data-theme="b">书目</li>
+		{% for book in series.Books%}
+		<li><a href="{{path('_series_book',{'seriesId':series.Id,'subId':book.Id})}}" data-transition="slide">{{book.DisplayName}}</a></li>
+		{%endfor%}
+	</ul>
+{% endblock %}
+
+{% block footer %}
+<h1>{{ series.DisplayName }}</h1>
+{% endblock %}

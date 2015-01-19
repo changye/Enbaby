@@ -1,0 +1,48 @@
+<?php
+
+namespace Enbaby\AudioLibBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Series
+ *
+ * @ORM\Table(name="Series")
+ * @ORM\Entity
+ */
+class Series
+{
+    /**
+     * @ORM\Column(name="Id", type="string", length=5)
+     * @ORM\Id
+     */
+    protected $id;
+
+	/**
+     * @ORM\Column(name="DisplayName", type="text")
+     */
+    protected $displayName;
+
+    /**
+     * @ORM\Column(name="Description", type="text")
+     */
+    protected $description;
+
+    /**
+     * @ORM\Column(name="BookNumber", type="integer")
+     */
+    protected $bookNumber;
+
+    /**
+     * @ORM\Column(name="PublishDate", type="date")
+     */
+    protected $publishDate;
+
+    /**
+     * @ORM\Column(name="Publisher", type="string",length=400)
+     */
+    protected $publisher;
+
+
+
+}
